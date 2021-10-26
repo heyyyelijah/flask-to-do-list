@@ -20,7 +20,7 @@ h3,  {
 }
 
 .custom-font {
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .home-section {
@@ -35,11 +35,12 @@ h3,  {
 .navbar {
     margin: auto 12%;
     font-size: 1.5rem;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .navbar-brand {
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.7rem;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -139,11 +140,12 @@ ul {
   text-align: center;
 
   font-family: 'Zen Kurenaido', sans-serif;
+  font-family: 'Bebas Neue', cursive;
 
 }
 
 #to-do-title {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 /* Clear floats after the header */
@@ -220,6 +222,12 @@ input {
     margin: 10% auto 3%;
     color: white;
     font-size: 1rem;
+}
+
+.soc-icons {
+    font-size: 2rem;
+    color: white;
+    margin: 5px;
 }
 
 .footer-hr {
