@@ -81,15 +81,14 @@ def home():
         return render_template("index.html", home_page=True, logged_out=logged_out, user=user,
                                entry_len=len(entries), entries=entries
                                )
-    
+
     return render_template("index.html", home_page=True, logged_out=logged_out, entry_len=0)
 
-# add cards like trello
 
 @app.route('/new-entry', methods=["GET", "POST"])
 def add_entry():
     logged_out = user_logged_out()
-    if request.method == "POST" and logged_out == False:
+    if request.method == "POST" and logged_out == False and request.form['add_entry'] != "":
         # user = User.query.filter_by(id=current_user.get_id()).first()
         new_entry = TodoList(
             entry=request.form['add_entry'],
@@ -99,34 +98,49 @@ def add_entry():
         db.session.add(new_entry)
         db.session.commit()
         return redirect(url_for("home"))
+    elif logged_out == True:
+        flash("Login or Register to add an entry")
+        return redirect(url_for('home'))
+
     return redirect(url_for("home"))
+
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
 
     if request.method == "POST":
+        email = request.form['email']
+        name = request.form['name']
+        password = request.form['password']
 
         # If user's email already exists
-        # if User.query.filter_by(email=form.email.data).first():
-        #     # Send flash messsage
-        #     flash("You've already signed up with that email, log in instead")
-        #     # Redirect to /login route.
-        #     return redirect(url_for('login'))
+        if User.query.filter_by(email=email).first():
+            # Send flash messsage
+            flash("You've already signed up with that email, log in instead")
+            # Redirect to /login route.
+            return redirect(url_for('login'))
+
+        # If user leaves a blank input
+        elif email == "" or password == "" or name == "":
+            # Send flash messsage
+            flash("Please do not leave an empty input field")
+            return redirect(url_for('register'))
 
         hash_and_salted_password = generate_password_hash(
-            request.form['password'],
+            password,
             method='pbkdf2:sha256',
             salt_length=8
         )
         new_user = User(
-            email=request.form['email'],
-            name=request.form['name'],
+            email=email,
+            name=name,
             password=hash_and_salted_password,
         )
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
         return redirect(url_for("home"))
+
     # logged_out = user_logged_out()  , logged_out=logged_out
     return render_template("register.html", register_page=True)
 
@@ -136,19 +150,24 @@ def login():
     if request.method == "POST":
         email = request.form['email']
         password = request.form['password']
+        # checks if email/pass field is empty
+        if email != "" or password != "":
         # Find user by email entered.
-        user = User.query.filter_by(email=email).first()
-        # Check stored password hash against entered password hashed.
-        try:
-            if check_password_hash(user.password, password):
-                login_user(user)
-                return redirect(url_for('home'))
-            else:
-                flash("Your email or password is not signed up, register instead")
-                return redirect(url_for('register'))
-        except AttributeError:
-                flash("Your email or password is not signed up, register instead")
-                return redirect(url_for('register'))
+            user = User.query.filter_by(email=email).first()
+            # Check stored password hash against entered password hashed.
+            try:
+                if check_password_hash(user.password, password):
+                    login_user(user)
+                    return redirect(url_for('home'))
+                else:
+                    flash("Your email or password is not signed up, register instead")
+                    return redirect(url_for('register'))
+            except AttributeError:
+                    flash("Your email or password is not signed up, register instead")
+                    return redirect(url_for('register'))
+        elif email == "" or password == "":
+            flash("Please do not leave an empty input field")
+            return redirect(url_for('login'))
 
     logged_out = user_logged_out()
     return render_template("login.html", logged_out=logged_out, sign_in_page=True   )
@@ -162,6 +181,7 @@ def logout():
 
 
 @app.route("/delete/<int:entry_id>", methods=["GET", "POST"])
+@login_required
 def delete_entry(entry_id):
     entry_to_delete = TodoList.query.get(entry_id)
     db.session.delete(entry_to_delete)
@@ -170,4 +190,4 @@ def delete_entry(entry_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

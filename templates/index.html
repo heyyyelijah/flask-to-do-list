@@ -25,10 +25,16 @@
     </form>
     </div>
 
+<!-- flash messages "sign in to add an entry" -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <p style="color:red; font-size:1.2rem;">{{ messages[0] }}</p>
+        {% endif %}
+    {% endwith %}
+
     <ul id="myUL" class="ul1">
 
       {% if logged_out == True %}
-          <li class="li1">Sign In or Register to add an entry<a class="delete-entry">✔</a></li>
           <li class="li1">Make Tea<a class="delete-entry">✔</a></li>
           <li class="li1">Meditate<a class="delete-entry">✔</a></li>
           <li class="li1">Read a book<a class="delete-entry">✔</a></li>

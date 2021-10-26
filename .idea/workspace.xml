@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="added Postgresql and psycopg2-binary package">
+    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="edited text type for password field to type=&quot;password&quot; for login page and registration page and turned debug to false">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -123,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635238771141</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="edited text type for password field to type=&quot;password&quot; for login page and registration page and turned debug to false">
+      <created>1635286004043</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635286004043</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +147,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix .idea bug, no py interpreter" />
@@ -145,6 +157,7 @@
     <MESSAGE value="added Procfile and gunicorn" />
     <MESSAGE value="replaced procfile from txt to just a file&#10;that I got from blog-with-users-start1" />
     <MESSAGE value="added Postgresql and psycopg2-binary package" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Postgresql and psycopg2-binary package" />
+    <MESSAGE value="edited text type for password field to type=&quot;password&quot; for login page and registration page and turned debug to false" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited text type for password field to type=&quot;password&quot; for login page and registration page and turned debug to false" />
   </component>
 </project>
