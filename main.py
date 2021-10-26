@@ -55,8 +55,8 @@ db.create_all()
 def user_logged_out():
     ''' returns True if the user is currently logged out '''
     user_id = current_user.get_id()
-    print(type(user_id))
-    print(f'id = {user_id}')
+    # print(type(user_id))
+    # print(f'id = {user_id}')
     try:
         if str(User.query.get(user_id)) == 'None':
             logged_out = True
@@ -71,11 +71,10 @@ def user_logged_out():
 def home():
     logged_out = user_logged_out()
     user = User.query.filter_by(id=current_user.get_id()).first()
-    print(f'current_user: {current_user.get_id}')
-    print()
+    # print(f'current_user: {current_user.get_id}')
     if logged_out == False:
         entries = TodoList.query.filter_by(author_id=current_user.get_id()).all()
-        print(len(entries))
+        # print(len(entries))
         if request.method == "POST":
             return render_template("index.html", home_page=True,
                                    logged_out=logged_out, entry_len=len(entries),
