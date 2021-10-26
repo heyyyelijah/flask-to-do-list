@@ -18,8 +18,7 @@ app.config['SECRET_KEY'] = config("SECRET_KEY")
 bootstrap = Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL1",  "sqlite:///flask-todolist.db")
-# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///blog.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1",  "sqlite:///flask-todolist.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -171,4 +170,4 @@ def delete_entry(entry_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
