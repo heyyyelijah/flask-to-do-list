@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="workspace.xml update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="fixed some weird bugs">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635226686666</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed some weird bugs">
+      <created>1635227125023</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635227125023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix .idea bug, no py interpreter" />
     <MESSAGE value="workspace.xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+    <MESSAGE value="fixed some weird bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some weird bugs" />
   </component>
 </project>
