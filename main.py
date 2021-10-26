@@ -12,11 +12,12 @@ from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 import os
+from decouple import config
 
 Base = declarative_base()
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
-app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSadsdihBXox7C0sKR6b"
+app.config['SECRET_KEY'] = config("SECRET_KEY")
+
 bootstrap = Bootstrap(app)
 
 ##CONNECT TO DB

@@ -2,7 +2,7 @@
 /* MAIN SECTION */
 body {
     text-align: center;
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     color: white;
 }
 
@@ -14,10 +14,13 @@ body {
 
 h1,
 h2,
-h3,
-h4,  {
+h3,  {
     color: white;
     font-size: 2rem;
+}
+
+.custom-font {
+    font-family: 'Zen Kurenaido', sans-serif;
 }
 
 .home-section {
@@ -36,6 +39,7 @@ h4,  {
 
 .navbar-brand {
     font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 1.5rem;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -135,6 +139,7 @@ ul {
   text-align: center;
 
   font-family: 'Zen Kurenaido', sans-serif;
+
 }
 
 #to-do-title {
@@ -195,6 +200,14 @@ input {
 .register-btn {
     margin: 5% auto;
     width: 90%;
+    background: #11324D;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0px auto;
+}
+
+.register-btn:hover {
+    background-color: #506D84;
 }
 
 .input-register {
@@ -210,5 +223,5 @@ input {
 }
 
 .footer-hr {
-    margin-top: 15%;
+    margin-top: 7%;
 }
