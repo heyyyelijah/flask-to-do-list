@@ -1,0 +1,58 @@
+
+{% block content %}
+{% include 'header.html' %}
+
+<body style="background-image: url('{{url_for('static', filename='/img/bg/pebbles-bg.png') }}');">
+
+
+{% include "navigationbar.html" %}
+<hr style="margin: 0px auto 1%;">
+<section class="home-section">
+
+
+    <div id="myDIV" class="header">
+    <div id="to-do-title">
+    {% if logged_out != True %}
+        <h2>{{ user.name }}'s To Do List</h2>
+    {% else %}
+        <h2>My To Do List</h2>
+    {% endif %}
+    </div>
+    <br>
+    <form action="{{ url_for('add_entry') }}" method="post">
+        <input type="text" id="myInput" name="add_entry" placeholder="Add New Entry">
+        <input type="submit" value="ADD ENTRY" class="addBtn">
+    </form>
+    </div>
+
+    <ul id="myUL" class="ul1">
+
+      {% if logged_out == True %}
+          <li class="li1">Sign In or Register to add an entry<a class="delete-entry">✔</a></li>
+          <li class="li1">Make Tea<a class="delete-entry">✔</a></li>
+          <li class="li1">Meditate<a class="delete-entry">✔</a></li>
+          <li class="li1">Read a book<a class="delete-entry">✔</a></li>
+          <li class="li1">Study and Hustle<a class="delete-entry">✔</a></li>
+          <li class="li1">Work Out<a class="delete-entry">✔</a></li>
+          <li class="li1">Walking (30 minutes)<a class="delete-entry">✔</a></li>
+      {% elif logged_out == False and entry_len > 0 %}
+          {% for entry in entries %}
+          <div class="each-entry">
+          <li class="li1">
+              {{ entry.entry }}
+              <a class="delete-entry" href="{{url_for('delete_entry', entry_id=entry.id) }}">✔</a>
+          </li>
+          </div>
+          {% endfor %}
+      {% elif entry_len == 0 and logged_out == False %}
+          <li class="li1">Add Entry<a class="delete-entry">✔</a></li>
+          <li class="li1">Add Entry<a class="delete-entry">✔</a></li>
+          <li class="li1">Add Entry<a class="delete-entry">✔</a></li>
+      {% endif %}
+    </ul>
+
+</section>
+
+{% include "footer.html" %}
+
+{% endblock %}

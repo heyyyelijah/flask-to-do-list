@@ -1,0 +1,42 @@
+
+
+{% block content %}
+{% include "header.html" %}
+
+<body style="background-image: url('{{url_for('static', filename='/img/bg/pebbles-bg.png') }}');">
+{% include "navigationbar.html" %}
+
+<hr class="hr-top">
+<section class="home-section">
+
+  <h1>LOGIN</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <p style="color:red; font-size:1.7rem;">{{ messages[0] }}</p>
+          {% endif %}
+        {% endwith %}
+      <div class="register-form">
+        <form action="{{ url_for('login') }}" method="post">
+          <div>
+            <label class="label-register" for="name">Email:</label>
+            <input class="input-register" type="text" id="email" name="email">
+          </div>
+          <br>
+          <div>
+            <label class="label-register" for="password">Password:</label>
+            <input class="input-register" type="text" id="password" name="password">
+          </div>
+          <input class="register-btn" type="submit" value="Log In">
+        </form>
+      </div>
+        </div>
+      </div>
+  </div>
+
+</section>
+{% include "footer.html" %}
+{% endblock %}

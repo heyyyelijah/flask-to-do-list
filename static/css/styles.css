@@ -1,0 +1,214 @@
+
+/* MAIN SECTION */
+body {
+    text-align: center;
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: white;
+}
+
+.hr-top{
+    margin: 0px auto;
+    border: 0px;
+    margin-bottom: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,  {
+    color: white;
+    font-size: 2rem;
+}
+
+.home-section {
+    margin: 1% 25% 5%;
+}
+
+.home-words {
+    font-size: 3rem;
+}
+/* NAVIGATION BAR */
+
+.navbar {
+    margin: auto 12%;
+    font-size: 1.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.delete-entry {
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 2rem;
+    color: #082032;
+    width: 7%;
+}
+
+.delete-entry:hover {
+    color: #5089C6;
+}
+
+/* Style the list items */
+.ul1 .li1 {
+  color: black;
+  cursor: pointer;
+  position: relative;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type:none;
+  padding: 12px 8px 12px 40px;
+  border: solid 0.1px;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.ul1 .li1:nth-child(even) {
+      background: #C8C6C6;
+}
+
+/* Darker background-color on hover */
+.ul1 .li1:hover {
+  background: #93B5C6;
+}
+
+/* When clicked on, add a background color and strike out text */
+.ul1 .li1.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.ul1 .li1.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  color: black;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  color: white;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+#to-do-title {
+    font-size: 3rem;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #506D84;
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #11324D;
+}
+
+/* FORMS */
+.register-form {
+    color: white;
+    font-size: 1.5rem;
+    margin: 3%;
+    text-align: center;
+    width: 100%;
+}
+
+.label-register {
+    display: block;
+    width: 150px;
+    text-align: left;
+}
+
+.register-btn {
+    margin: 5% auto;
+    width: 90%;
+}
+
+.input-register {
+    width: 90%;
+}
+
+
+/* FOOTER SECTION */
+.footer-section {
+    margin: 10% auto 3%;
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-hr {
+    margin-top: 15%;
+}

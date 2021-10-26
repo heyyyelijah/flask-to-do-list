@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-to">
+    <a class='navbar-brand' id="nav-logo" href="{{ url_for('home') }}">LIST IT, THEN DO IT</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navid" aria-controls="navid" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class='collapse navbar-collapse ' id="navid">
+    <ul class='ms-auto navbar-nav'>
+        {% if not home_page %}
+        <li class='nav-item nav-btn'>
+            <a class='nav-link' href="{{ url_for('home') }}">Home</a>
+        </li>
+        {% endif %}
+
+        {% if logged_out == True and not sign_in_page %}
+        <li class='nav-item nav-btn'>
+            <a class='nav-link' href="{{ url_for('login') }}">Sign In</a>
+        </li>
+        {% endif %}
+
+        {% if logged_out == True and not register_page %}
+        <li class='nav-item nav-btn'>
+            <a class='nav-link' href="{{ url_for('register') }}">Register</a>
+        </li>
+        {% endif %}
+        {% if logged_out == False %}
+        <li class='nav-item nav-btn'>
+            <a class='nav-link' href="{{ url_for('logout') }}">Sign Out</a>
+        </li>
+        {% endif %}
+    </ul>
+    </div>
+</nav>
