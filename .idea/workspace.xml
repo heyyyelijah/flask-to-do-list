@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="fixed and added some flash messages and added argument &quot;do not leave an empty field&quot;">
+    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="added link to footer icons and changed some fonts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635287724838</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added link to footer icons and changed some fonts">
+      <created>1635288788967</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635288788967</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +171,7 @@
     <MESSAGE value="added Postgresql and psycopg2-binary package" />
     <MESSAGE value="edited text type for password field to type=&quot;password&quot; for login page and registration page and turned debug to false" />
     <MESSAGE value="fixed and added some flash messages and added argument &quot;do not leave an empty field&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed and added some flash messages and added argument &quot;do not leave an empty field&quot;" />
+    <MESSAGE value="added link to footer icons and changed some fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added link to footer icons and changed some fonts" />
   </component>
 </project>

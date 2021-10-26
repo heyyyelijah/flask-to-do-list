@@ -7,10 +7,10 @@
 
 {% include "navigationbar.html" %}
 <hr style="margin: 0px auto 1%;">
-<section class="home-section">
+<section class="home-section container">
 
 
-    <div id="myDIV" class="header">
+    <div id="myDIV" class="header col-xl">
     <div id="to-do-title">
     {% if logged_out != True %}
         <h2>{{ user.name }}'s To Do List</h2>
@@ -32,7 +32,7 @@
         {% endif %}
     {% endwith %}
 
-    <ul id="myUL" class="ul1">
+    <ul id="myUL" class="ul1 col-xl">
 
       {% if logged_out == True %}
           <li class="li1">Make Tea<a class="delete-entry">✔</a></li>
