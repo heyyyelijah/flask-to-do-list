@@ -29,14 +29,26 @@
 
 <!-- flash messages "sign in to add an entry" -->
     {% with messages = get_flashed_messages() %}
-        {% if messages %}
+        {% if messages and messages != "elijah" %}
         <p style="color:red; font-size:1.2rem;">{{ messages[0] }}</p>
         {% endif %}
     {% endwith %}
 
     <ul id="myUL" class="ul1">
+      {% if author_id == 'elijah' %}
+          <li class="li1">cool diba?<a class="delete-entry">✔</a></li>
+          <li class="li1">ay...<a class="delete-entry">✔</a></li>
+          <li class="li1">hindi ba :(<a class="delete-entry">✔</a></li>
+          {% for entry in entries %}
+          <div class="each-entry">
+          <li class="li1">
+              {{ entry.entry }}
+              <a class="delete-entry" href="{{url_for('delete_entry', entry_id=entry.id) }}">✔</a>
+          </li>
+          </div>
+          {% endfor %}
 
-      {% if logged_out == True %}
+      {% elif logged_out == True %}
           <li class="li1">Make Tea<a class="delete-entry">✔</a></li>
           <li class="li1">Meditate<a class="delete-entry">✔</a></li>
           <li class="li1">Read a book<a class="delete-entry">✔</a></li>
