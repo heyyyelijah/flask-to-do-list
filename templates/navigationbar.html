@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-to">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
     <a class='navbar-brand' id="nav-logo" href="{{ url_for('home') }}">ILISTA MO</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navid" aria-controls="navid" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class='collapse navbar-collapse ' id="navid">
+    <div class='collapse navbar-collapse' id="navid">
     <ul class='ms-auto navbar-nav'>
         {% if not home_page %}
         <li class='nav-item nav-btn'>
@@ -30,5 +32,7 @@
         </li>
         {% endif %}
     </ul>
+
     </div>
+
 </nav>
