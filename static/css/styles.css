@@ -231,6 +231,10 @@ input {
     margin: 5px;
 }
 
+.soc-icons:hover {
+    color: #2F86A6;
+}
+
 .footer-hr {
     margin-top: 7%;
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="changed GRIDSTYLING">
+    <list default="true" id="1fccdd9e-0714-4438-9c76-4872a151f227" name="Changes" comment="added elijah entry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask-todolist.db" beforeDir="false" afterPath="$PROJECT_DIR$/flask-todolist.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635294194804</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added elijah entry">
+      <created>1635297424423</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635297424423</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +212,7 @@
     <MESSAGE value="removed grid for now again" />
     <MESSAGE value="changed logo" />
     <MESSAGE value="changed GRIDSTYLING" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed GRIDSTYLING" />
+    <MESSAGE value="added elijah entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="added elijah entry" />
   </component>
 </project>
